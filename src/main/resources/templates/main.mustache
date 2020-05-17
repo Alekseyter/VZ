@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>VZnakomstve</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+<body class="kraya">
+    <header class="head">
+        <a class="aheadvz" href="main" title="Главная страница">VZnakomstve</a>
+        <a class="aheadreg" href="reg" title="Регистрация">Registration</a>
+    </header>
+
+    <div><br/>Список пользователей :</div>
+    <form method="post" action="filter">
+        <input type="text" name="filter" />
+        <button type="submit">Найти</button>
+    </form>
+    <br/>
+    {{#users}}
+        <div>
+            <b>{{id}}</b>
+            <span>{{name}} {{surname}}</span>
+        </div>
+    {{/users}}
+
+</body>
+</html>
